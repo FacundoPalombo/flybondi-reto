@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { Link } from '@reach/router'
 import { SUNSET } from '../../assets/styles/color'
 export const Nav = styled.nav`
+display: flex;
+align-content: center;
+justify-content: center;
+
 
 `
 

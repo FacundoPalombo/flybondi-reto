@@ -1,8 +1,9 @@
 import React from 'react'
-import { A, Nav, } from './styles'
+import { A, Nav } from './styles'
 export const Navigation = () => {
   return (
-    <nav>
-    </nav>
+    <Nav>
+      <A to='/flights'>Flights</A>
+    </Nav>
   )
 }
