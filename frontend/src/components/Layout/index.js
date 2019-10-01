@@ -12,8 +12,8 @@ export const Layout = ({
       <title>{title}</title>
       <meta name='description' content={subtitle}/>
     </Helmet>
-    <Navigation/>
     <GlobalStyle/>
+    <Navigation/>
     {children}
     </>
   )

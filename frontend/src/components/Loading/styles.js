@@ -1,31 +1,36 @@
-import styled, {keyframes} from 'styled-components'
 
-export const Spinner = styled.div`
-& {
-  display: inline-block;
-  transform: translateZ(1px);
-}
-  display: inline-block;
-  width: 51px;
-  height: 51px;
-  margin: 6px;
-  border-radius: 50%;
-  background: #fff;
-  animation: ${Keyframes} 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-`
-
-const Keyframes = keyframes`
-0%, 100% {
-    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+import React from 'react';
+import styled from 'styled-components';
+import {SAND_WET} from '../../assets/styles/color'
+export const Spinner = styled.svg`
+  animation: rotate 2s linear infinite;
+  margin: 30px auto;
+  width: 50px;
+  height: 50px;
+  
+  & .path {
+    stroke: #${SAND_WET};
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
   }
-  0% {
-    transform: rotateY(0deg);
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  50% {
-    transform: rotateY(1800deg);
-    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
   }
-  100% {
-    transform: rotateY(3600deg);
-  }
-`
+`;
