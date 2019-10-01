@@ -2,11 +2,13 @@
   "name": "codea-shareable-test",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --history-api-fallback",
-    "build:dev": "webpack --mode=development"
+    "dev": "webpack-dev-server",
+    "build:dev": "webpack --mode=development",
+    "lint": "standard"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "axios": "^0.19.0",
     "dotenv": "^8.1.0",
     "next": "latest",
     "react": "^16.7.0",

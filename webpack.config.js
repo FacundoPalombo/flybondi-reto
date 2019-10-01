@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const dotenv = require('dotenv')
+const path = require('path')
   dotenv.config()
 const { PORT, NODE_ENV } = process.env
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './frontend/src/index.js',
   output: {
     filename: 'app.bundle.js',
     publicPath: '/'
@@ -26,10 +27,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: path.resolve(__dirname, 'frontend/src/index.html')
     })
   ],
   devServer: {
+    historyApiFallback: true,
     compress: true,
     port: 3000,
     hot: true,
