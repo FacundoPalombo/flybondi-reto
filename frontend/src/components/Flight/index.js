@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Flight = () => {
+export const Flight = ({data}) => {
   return (
     <main>
       <article>

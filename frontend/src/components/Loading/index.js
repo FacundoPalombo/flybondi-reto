@@ -1,9 +1,6 @@
 import React from 'react'
+import { Spinner } from './styles'
 
 export const Loading = () => {
-  return (
-    <>
-    Loading...
-    </>
-  )
+  return <Spinner/>
 }

@@ -1,9 +1,7 @@
 import React from 'react'
-
-export const Search = () => {
+import { Search as Finder } from '../components/Search'
+export const Search = (props) => {
   return(
-    <>
-    Search engine
-    </>
+    <Finder {...props}/>
   )
 }

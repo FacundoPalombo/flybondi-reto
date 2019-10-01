@@ -1,9 +1,20 @@
 import React from 'react'
+import { Link } from '@reach/router'
 
 export const Home = () => {
   return (
-    <>
-    This is the Home
-    </>
+    <main>
+      <h1>Home Page</h1>
+      <article>
+        <section>
+          <h2>Promotions</h2>
+        </section>
+        <section>
+          <Link to="/search">
+            <a>Search</a>
+          </Link>
+        </section>
+      </article>
+    </main>
   )
 }
