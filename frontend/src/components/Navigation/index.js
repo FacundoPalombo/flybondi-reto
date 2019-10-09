@@ -1,11 +1,12 @@
 import React from 'react'
-import { A, Nav } from './styles'
+import { StyledLink, Nav } from './styles'
+import { MdHome, MdSearch, MdAirplanemodeActive } from 'react-icons/md'
 export const Navigation = () => {
   return (
     <Nav>
-      <A to='/'>Home</A>
-      <A to='/search'>Search</A>
-      <A to='/flights'>Flights</A>
+      <StyledLink to='/'><MdHome size='30px'/> </StyledLink>
+      <StyledLink to='/search'><MdSearch size='30px' /></StyledLink>
+      <StyledLink to='/flights'><MdAirplanemodeActive size='30px' /></StyledLink>
     </Nav>
   )
 }

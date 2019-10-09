@@ -12,5 +12,5 @@ export const Item = styled.li`
 `
 export const StyledLink = styled(Link)`
   padding: 3%;
-  
+  text-decoration: none;
 `

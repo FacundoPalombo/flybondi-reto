@@ -20,7 +20,6 @@ export const Search = () => {
             should have:
           </p>
           <Routes {...airportData} isOpen={isOpen}>
-            Hello routes!
           </Routes>
         </Section>
         <Link to="/flights">

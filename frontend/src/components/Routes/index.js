@@ -4,7 +4,6 @@ import { Error } from '../Error'
 import { Card } from '../Card'
 import { CardsWrapper } from '../CardsWrapper'
 import { Item, StyledLink } from './styles'
-import { Link } from '@reach/router'
 import { MdArrowForward } from 'react-icons/md'
 
 
@@ -33,11 +32,11 @@ export const Routes = (props) => {
         routes.map((origin,key) => {
           return (
             <Item key={key}>
-              <Link to={origin.code}>
+              <StyledLink to={origin.code}>
                 <MdArrowForward style={{
                   margin: 'auto'
                 }} size='50px'/> 
-              </Link>
+              </StyledLink>
               <CardsWrapper 
               name={origin.description} 
               onClick={handleOrigin} 

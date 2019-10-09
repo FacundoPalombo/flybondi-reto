@@ -99,6 +99,10 @@ html {
     -ms-text-size-adjust: 100%; 
 }
 
+a {
+    text-decoration: none;
+}
+
 a:focus {
     outline: thin dotted;
 }

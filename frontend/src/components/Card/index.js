@@ -1,7 +1,6 @@
 import React from 'react'
-import { Container } from './styles'
+import { Container, Svg } from './styles'
 import { Title, Span } from '../../assets/styles/styles'
-import { DummyImage } from '../DummyImage'
 export const Card = ({
   name,
   destination,
@@ -11,8 +10,8 @@ export const Card = ({
   return (
     <Container>
       <Title>{name} ({origin})</Title>
-      <DummyImage size={'64px'}/>
-      <Span>{destination}</Span>
+      <Svg size='32px'/>
+      <Span>Destination: {destination}</Span>
       {children}
     </Container>
   )
