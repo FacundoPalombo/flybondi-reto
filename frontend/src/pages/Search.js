@@ -19,12 +19,12 @@ const useAirportsData = () =>{
 }
 
 export const Search = () => {
-  const [isOrigin, setIsOrigin] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   const airportData = useAirportsData()
   return (
     <Main>
       <Article>
-        <h1>Select your {isOrigin ? 'origin' : 'destination'}</h1>
+        <h1>Select your origin</h1>
         <Section>
           <p>
             Here should be a card approach list of all available origin
@@ -32,7 +32,7 @@ export const Search = () => {
             display all available destination for given selection. The card
             should have:
           </p>
-          <Routes {...airportData}>
+          <Routes {...airportData} isOpen={isOpen}>
             Hello routes!
           </Routes>
         </Section>
