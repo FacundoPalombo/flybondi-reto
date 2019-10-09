@@ -1,22 +1,9 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { Link } from '@reach/router';
 import { Section, Article, Main } from '../assets/styles/styles'
-import axios from 'axios'
 import { Routes } from '../components/Routes'
 
-const useAirportsData = () =>{
-  const [routes, setRoutes] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-  useEffect(() => {
-    setLoading(true)
-    axios.get('/api/mocks/routes.json')
-      .then(({data}) => setRoutes(data.routes))
-      .catch((e) => setError(e.message))
-    setLoading(false)
-  },[])
-  return {loading, error, routes}
-}
+import { useAirportsData } from '../hooks/useAirportsData'
 
 export const Search = () => {
   const [isOpen, setIsOpen] = useState(true);
