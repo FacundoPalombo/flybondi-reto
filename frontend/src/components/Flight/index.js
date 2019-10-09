@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 
 export const Flight = (props) => {
+  
   return(
     <>
-      {props.originCode}
+    Hello!
     </>
   )
 }

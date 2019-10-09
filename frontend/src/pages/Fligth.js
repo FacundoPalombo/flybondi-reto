@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
-import { Flight as FlightComponent } from '../components/Flight'
+import React, { useEffect, useState } from 'react';
+import { Flight as FlightComponent } from '../components/Flight';
+import { useAirportsData } from '../hooks/useAirportsData';
 
-export const Flight = ({
-  uri
-}) => {
-  const [flight, setFlight] = useState({})
-  console.log(uri)
-  return(
-    <FlightComponent {...flight} />
-  )
-}
+export const Flight = ({ originCode, destinationCode }) => {
+  const flight = useAirportsData();
+  return <FlightComponent {...flight}/>;
+};
