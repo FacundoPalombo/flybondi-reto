@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import { Link } from '@reach/router'
-
 export const Home = () => {
   return (
     <main>
@@ -11,10 +10,10 @@ export const Home = () => {
         </section>
         <section>
           <Link to="/search">
-            <a>Search</a>
+            Search
           </Link>
         </section>
       </article>
     </main>
-  )
-}
+  );
+};

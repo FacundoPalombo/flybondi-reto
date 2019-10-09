@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 
-export const useLocalApi = (url = '/api') => {
+export const useLocalApi = async (url = '/api') => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false)
   try{
